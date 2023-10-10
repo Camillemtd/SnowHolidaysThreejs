@@ -246,6 +246,19 @@ gui.add(moonLight.position, "y").min(-5).max(5).step(0.001);
 gui.add(moonLight.position, "z").min(-5).max(5).step(0.001);
 scene.add(moonLight);
 
+// HouseLight
+const doorLight = new THREE.PointLight('#ff7d46', 1, 7)
+doorLight.position.set(0, 4, 2)
+
+
+const roofLight1 = new THREE.PointLight('#ff7d46', 1, 7)
+roofLight1.position.set(3.2, 2.8, 2)
+
+const roofLight2 = new THREE.PointLight('#ff7d46', 1, 7)
+roofLight2.position.set(- 3.2, 2.8, 2)
+
+house.add(doorLight, roofLight1, roofLight2)
+
 /**
  * Sizes
  */
